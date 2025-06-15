@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,260 +15,160 @@
         font-family: "Roboto Serif", serif;
         font-style: normal;
       }
-
       .italic {
         font-family: "Roboto Serif", serif;
         font-style: italic;
       }
+      input[type="checkbox"] {
+        transform: scale(1.1);
+        accent-color: #4ade80; /* Tailwind green-400 for Starter */
+      }
+      .growth input[type="checkbox"] {
+        accent-color: #a855f7; /* Tailwind purple-600 for Growth */
+      }
+      .premium input[type="checkbox"] {
+        accent-color: #facc15; /* Tailwind yellow-400 for Premium */
+      }
     </style>
-    <meta
-      name="description"
-      content="RETAIN - Build a store that brings customers back. Run promos, edit prices anytime, and turn interest into income. Your business, your control."
-    />
   </head>
   <body class="bg-gray-50 text-gray-800 font-sans">
-    <!-- Navbar -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-      <div
-        class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4"
-      >
-        <h1 class="text-xl font-bold Roboto-normal">RETENA</h1>
-        <nav class="hidden md:flex space-x-6">
-          <a href="#chat" class="hover:underline font-bold">Chat</a>
-          <a href="#pricing" class="hover:underline font-bold">Pricing</a>
-          <a href="#faq" class="hover:underline font-bold">FAQs</a>
-        </nav>
-        <div class="md:hidden">
-          <button id="menuBtn" class="focus:outline-none">
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
-        <a href="#pricing" class="block py-2">Pricing</a>
-        <a href="#faq" class="block py-2">FAQs</a>
-      </div>
-    </header>
-
     <!-- Hero Section -->
-    <section
-      class="relative bg-cover bg-center h-[80vh] flex items-center justify-center px-4 md:px-0"
-      style="background-image: url(./assets/return.avif)"
-    >
-      <div
-        class="bg-white bg-opacity-70 backdrop-blur-xl rounded-xl shadow-xl p-8 max-w-2xl text-center"
-      >
-        <h2 class="text-3xl md:text-4xl font-bold mb-4 Roboto-normal ">
-          Every customer could be a returning one. So why let them go?
-        </h2>
-        <p class="text-lg leading-relaxed italic">
-          Most online stores send your customers to checkout… and never see them
-          again. But when you connect through WhatsApp, you don’t just make a
-          sale you start a conversation.</p>
-          <p class="text-lg leading-relaxed italic mt-2">Their number becomes your follow-up.
-          Their message becomes your marketing list. And your product? It stays
-          top-of-mind, because you're now inside their daily chats.
-        </p>
-      </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-16 px-4 max-w-7xl mx-auto">
-      <h3 class="text-2xl font-bold text-center mb-10">Choose Your Plan</h3>
-      <div class="grid gap-8 md:grid-cols-3">
-        <!-- STARTER -->
-        <div
-          class="bg-white p-6 rounded-xl shadow-lg flex flex-col border border-gray-700 hover:shadow-xl transition-all"
-        >
-          <h4 class="text-xl font-bold mb-4 Roboto-normal text-gray-500">Starter</h4>
-          <hr class="mb-3 border-gray-400 " />
-          <p class="text-2xl font-bold mb-4 Roboto-normal text-gray-500">₦150,000</p>
-          <ul class="space-y-2 text-sm mb-6 italic text-gray-700">
-            <li class="flex items-start">
-              <span class="mr-2">✔️</span> One-page responsive
-              website (mobile & tablet)
-            </li>
-            <li class="flex items-start">
-              <span class="mr-2">✔️</span> Max of 15 products listing
-            </li>
-            <li class="flex items-start">
-              <span class="mr-2">✔️</span> All products in a
-              single scroll
-            </li>
-            <li class="flex items-start">
-              <span class="mr-2">✔️</span> Add-to-cart + WhatsApp
-              checkout
-            </li>
-            <li class="flex items-start">
-              <span class="mr-2">✔️</span> Customer reviews
-            </li>
-          </ul>
-          <a
-            href="#"
-            class="mt-auto bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded-lg text-center  font-bold"
-            >Get Started</a
-          >
-        </div>
-
-        <!-- GROWTH -->
-        <div
-          class="bg-white p-6 rounded-xl shadow-lg flex flex-col border border-purple-600 hover:shadow-xl transition-all"
-        >
-          <h4 class="text-xl font-bold mb-4 Roboto-normal text-purple-900">Growth</h4>
-          <hr class="mb-3 border-purple-600" />
-          <p class="text-2xl font-bold mb-4 Roboto-normal text-purple-900">₦200,000</p>
-          <ul class="space-y-2 text-sm mb-6 italic text-purple-900">
-            <li class="flex items-start">
-              <strong>Access to Everything in <span class="text-gray-600">Starter</span>, plus</strong>
-            </li>
-            <li class="flex items-start">
-              <span class="mr-2">✔️</span> Up to 30 products listing 
-            </li>
-            <li class="flex items-start">
-              <span class="mr-2">✔️</span> Sort Product into Categories
-            </li>
-            <li class="flex items-start">
-              <span class="mr-2">✔️</span> Search enabled (search for a single product)
-            </li>
-            <li class="flex items-start">
-              <span class="mr-2">✔️</span>
-             Seller's About Me section
-            </li>
-            <li class="flex items-start">
-              <span class="mr-2">✔️</span> Custom domain setup
-              (domain paid separately)
-            </li>
-            <li class="flex items-start font-bold">
-             BONUS
-            </li>
-            <li class="flex items-start">
-              <span class="mr-2">✔️</span> WhatsApp Auto-Reply
-              integration (android users)
-            </li>
-          </ul>
-          <a
-            href="#"
-            class="mt-auto bg-purple-900 hover:bg-purple-950 text-white py-2 px-4 rounded-lg text-center font-bold"
-            >Get Started</a
-          >
-        </div>
-
-        <!-- PREMIUM -->
-        <div
-          class="bg-white p-6 rounded-xl shadow-lg flex flex-col border border-yellow-400 hover:shadow-xl transition-all"
-        >
-          <h4 class="text-xl font-bold mb-4 Roboto-normal text-yellow-500">Premium</h4>
-          <hr class="mb-3 border-yellow-500" />
-          <p class="text-2xl font-bold mb-4 Roboto-normal text-yellow-500">
-            ₦400,000 – ₦500,000
-          </p>
-          <ul class="space-y-2 text-sm mb-6 italic text-yellow-700">
-            <li class="flex items-start">
-            <strong>Access to Everything in <span class="text-purple-950">Growth</span>, plus</strong>
-            </li>
-            <li class="flex items-start">
-              <span class="mr-2">✔️</span> 40+ products listing (flexible
-              & scalable)
-            </li>
-            <li class="flex items-start">
-              <span class="mr-2">✔️</span> Customer signup/login 
-            </li>
-            <li class="flex items-start">
-              <span class="mr-2">✔️</span> Order history
-            </li>
-            <li class="flex items-start">
-              <span class="mr-2">✔️</span> Domain + SSL support
-            </li>
-            <li class="flex items-start">
-              <span class="mr-2">✔️</span> 1-month free support
-            </li>
-            <li class="flex items-start">
-              <span class="mr-2">✔️</span> Full customization,
-              unique design
-            </li>
-          </ul>
-          <a
-            href="#"
-            class="mt-auto bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded-lg text-center font-bold"
-            >Get Started</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- Confused CTA -->
-    <section id="chat" class="py-12 px-4 text-center">
-      <h4 class="text-xl font-semibold mb-2">Not sure where to start?</h4>
-      <p class="mb-4">
-        Chat directly with <span class="font-bold">ME</span> to get personalized
-        advice.
+    <section class="py-20 text-center bg-white">
+      <h1 class="text-4xl font-bold mb-4 Roboto-normal">Welcome to RETENA</h1>
+      <p class="text-lg italic text-gray-600 max-w-xl mx-auto">
+        We build product ordering websites with seamless WhatsApp checkout.
       </p>
+    </section><!-- Pricing Section -->
+<section id="pricing" class="py-16 px-4 max-w-7xl mx-auto">
+  <h3 class="text-2xl font-bold text-center mb-10">Choose Your Plan</h3>
+  <div class="grid gap-8 md:grid-cols-3">
+    <!-- STARTER -->
+    <div
+      class="bg-white p-6 rounded-xl shadow-lg flex flex-col border border-gray-700 hover:shadow-xl transition-all"
+    >
+      <h4 class="text-xl font-bold mb-4 Roboto-normal text-gray-500">Starter</h4>
+      <hr class="mb-3 border-gray-400" />
+      <p class="text-2xl font-bold mb-4 Roboto-normal text-gray-500">₦150,000</p>
+      <ul class="space-y-2 text-sm mb-6 italic text-gray-700">
+        <li class="flex items-start">
+          <input type="checkbox" checked disabled class="mr-2" />
+          One-page responsive website (mobile & tablet)
+        </li>
+        <li class="flex items-start">
+          <input type="checkbox" checked disabled class="mr-2" />
+          Max of 15 products listing
+        </li>
+        <li class="flex items-start">
+          <input type="checkbox" checked disabled class="mr-2" />
+          All products in a single scroll
+        </li>
+        <li class="flex items-start">
+          <input type="checkbox" checked disabled class="mr-2" />
+          Add-to-cart + WhatsApp checkout
+        </li>
+        <li class="flex items-start">
+          <input type="checkbox" checked disabled class="mr-2" />
+          Customer reviews
+        </li>
+      </ul>
       <a
-        href="https://wa.me/+2349048510330"
-        class="inline-block bg-gray-800 text-white py-2 px-6 rounded-lg hover:bg-black transition-all"
-        >Chat</a
+        href="#"
+        class="mt-auto bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded-lg text-center font-bold"
+        >Get Started</a
       >
-    </section>
+    </div>
 
-    <!-- FAQ -->
-    <section id="faq" class="bg-gray-100 py-16 px-4">
-      <div class="max-w-3xl mx-auto">
-        <h3 class="text-2xl font-bold text-center mb-8">
-          Frequently Asked Questions
-        </h3>
-        <div class="space-y-6">
-          <div>
-            <h5 class="font-bold">Do I need to pay for a domain?</h5>
-            <p class="text-sm text-gray-700">
-              Yes! Domain cost is separate and
-              billed yearly.
-            </p>
-          </div>
-          <div>
-            <h5 class="font-bold">Can I upgrade later?</h5>
-            <p class="text-sm text-gray-700">
-              Yes! Start small and scale as your business grows. Seamless
-              upgrades anytime.
-            </p>
-          </div>
-          <div>
-            <h5 class="font-bold">Is support included?</h5>
-            <p class="text-sm text-gray-700">
-              1-month free support with Premium. Others can get help at a small
-              extra fee.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- GROWTH -->
+    <div
+      class="bg-white p-6 rounded-xl shadow-lg flex flex-col border border-purple-600 hover:shadow-xl transition-all growth"
+    >
+      <h4 class="text-xl font-bold mb-4 Roboto-normal text-purple-900">Growth</h4>
+      <hr class="mb-3 border-purple-600" />
+      <p class="text-2xl font-bold mb-4 Roboto-normal text-purple-900">₦200,000</p>
+      <ul class="space-y-2 text-sm mb-6 italic text-purple-900">
+        <li class="font-bold">Access to Everything in Starter, plus</li>
+        <li class="flex items-start">
+          <input type="checkbox" checked disabled class="mr-2" />
+          Up to 30 products listing
+        </li>
+        <li class="flex items-start">
+          <input type="checkbox" checked disabled class="mr-2" />
+          Sort Product into Categories
+        </li>
+        <li class="flex items-start">
+          <input type="checkbox" checked disabled class="mr-2" />
+          Search enabled (search for a single product)
+        </li>
+        <li class="flex items-start">
+          <input type="checkbox" checked disabled class="mr-2" />
+          Seller's About Me section
+        </li>
+        <li class="flex items-start">
+          <input type="checkbox" checked disabled class="mr-2" />
+          Custom domain setup (domain paid separately)
+        </li>
+        <li class="font-bold">BONUS</li>
+        <li class="flex items-start">
+          <input type="checkbox" checked disabled class="mr-2" />
+          WhatsApp Auto-Reply integration (Android users)
+        </li>
+      </ul>
+      <a
+        href="#"
+        class="mt-auto bg-purple-900 hover:bg-purple-950 text-white py-2 px-4 rounded-lg text-center font-bold"
+        >Get Started</a
+      >
+    </div>
 
-    <!-- Footer -->
-    <footer class="bg-black text-white py-6 text-center">
-      <p class="text-sm">Designed & Developed by <strong>WAYLES</strong></p>
-      <p class="text-sm mt-1">Contact: +2349048510330</p>
-      <p class="text-sm">Email: infoaccesswayles@gmail.com</p>
-        <p class="text-sm mt-1">
-            © 2025 WAYLES. All rights reserved.
-    </footer>
+    <!-- PREMIUM -->
+    <div
+      class="bg-white p-6 rounded-xl shadow-lg flex flex-col border border-yellow-400 hover:shadow-xl transition-all premium"
+    >
+      <h4 class="text-xl font-bold mb-4 Roboto-normal text-yellow-500">Premium</h4>
+      <hr class="mb-3 border-yellow-500" />
+      <p class="text-2xl font-bold mb-4 Roboto-normal text-yellow-500">
+        ₦400,000 – ₦500,000
+      </p>
+      <ul class="space-y-2 text-sm mb-6 italic text-yellow-700">
+        <li class="font-bold">Access to Everything in Growth, plus</li>
+        <li class="flex items-start">
+          <input type="checkbox" checked disabled class="mr-2" />
+          40+ products listing (flexible & scalable)
+        </li>
+        <li class="flex items-start">
+          <input type="checkbox" checked disabled class="mr-2" />
+          Customer signup/login
+        </li>
+        <li class="flex items-start">
+          <input type="checkbox" checked disabled class="mr-2" />
+          Order history
+        </li>
+        <li class="flex items-start">
+          <input type="checkbox" checked disabled class="mr-2" />
+          Domain + SSL support
+        </li>
+        <li class="flex items-start">
+          <input type="checkbox" checked disabled class="mr-2" />
+          1-month free support
+        </li>
+        <li class="flex items-start">
+          <input type="checkbox" checked disabled class="mr-2" />
+          Full customization, unique design
+        </li>
+      </ul>
+      <a
+        href="#"
+        class="mt-auto bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded-lg text-center font-bold"
+        >Get Started</a
+      >
+    </div>
+  </div>
+</section>
 
-    <!-- Mobile menu script -->
-    <script>
-      document.getElementById("menuBtn").addEventListener("click", () => {
-        const menu = document.getElementById("mobileMenu");
-        menu.classList.toggle("hidden");
-      });
-    </script>
+<!-- Footer -->
+<footer class="bg-white text-center py-6 border-t border-gray-300">
+  <p class="text-sm text-gray-600 italic">© 2025 RETENA. All rights reserved.</p>
+</footer>
+
   </body>
-</html>
+                      </html>
