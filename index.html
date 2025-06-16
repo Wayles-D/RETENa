@@ -36,7 +36,7 @@
         <h1 class="text-xl font-bold Roboto-normal">RETENA</h1>
         <nav class="hidden md:flex space-x-6">
           <a href="#pricing" class="hover:underline font-bold">Pricing</a>
-          <a href="#about" class="hover:underline font-bold">About Us</a>
+          <a href="#contact" class="hover:underline font-bold">Contact Us</a>
         </nav>
         <div class="md:hidden">
           <button id="menuBtn" class="focus:outline-none">
@@ -58,13 +58,13 @@
       </div>
       <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
         <a href="#pricing" class="block py-2">Pricing</a>
-        <a href="#about" class="block py-2">About Us</a>
+        <a href="#contact" class="block py-2">Contact Us</a>
       </div>
     </header>
 
     <!-- Hero Section -->
     <section
-      class="relative bg-cover bg-center h-[80vh] flex items-center justify-center px-4 md:px-0"
+      class="relative bg-cover bg-center h-[100vh] flex items-center justify-center px-4 md:px-0"
       style="background-image: url(./assets/return.avif)"
     >
       <div
@@ -255,6 +255,67 @@
         </div>
       </div>
     </section>
+
+    <section id="contact" class="py-20 px-4 bg-gray-100">
+  <div class="max-w-2xl mx-auto bg-gray-300 bg-opacity-80 backdrop-blur-md p-10 rounded-3xl shadow-xl">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-6">Let's Talk</h2>
+    <p class="text-center text-gray-600 mb-10">
+      Have a question or ready to start your project? Drop a message and we’ll get back within 24hrs.
+    </p>
+
+    <form action="https://formspree.io/f/xldnnylb" method="POST" class="space-y-6">
+      <input type="hidden" name="_redirect" value="https://wayles-d.github.io/RETENa/thankyou.html" />
+
+      <!-- Name -->
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-700" for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="John Doe"
+          class="w-full px-4 py-3 rounded-xl bg-white bg-opacity-80 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+        />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-700" for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="you@example.com"
+          class="w-full px-4 py-3 rounded-xl bg-white bg-opacity-80 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+        />
+      </div>
+
+      <!-- Message -->
+      <div>
+        <label class="block mb-2 text-sm font-medium text-gray-700" for="message">Your Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          placeholder="Tell us what you need help with..."
+          class="w-full px-4 py-3 rounded-xl bg-white bg-opacity-80 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none"
+        ></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button
+        type="submit"
+        class="w-full py-3 px-6 rounded-xl bg-gray-800 text-white font-bold hover:bg-gray-900 transition-all"
+      >
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
 
     <!-- Footer -->
     <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content items-center bg-gray-900 p-4">
